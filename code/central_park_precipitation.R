@@ -48,6 +48,11 @@ nyc_precipitation_plot_smooth_lm <- ggplot(nyc_precipitation, aes(x = YEAR, y = 
 nyc_precipitation_plot_smooth_lm
 #`geom_smooth()` using formula 'y ~ x'
 
+# Fit linear regression model
+lm_model <- lm(ANNUAL ~ YEAR, data = nyc_precipitation)
+# Print summary of linear regression model
+summary(lm_model)
+
 # Create subsets and rename columns for multiple groupings
 nyc_average <- subset(nyc_precipitation, select = c("YEAR", "ANNUAL"))
 names(nyc_average) <- c("YEAR", "Precipitation (Inches)")
