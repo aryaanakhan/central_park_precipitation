@@ -1,3 +1,5 @@
+library(tidyverse)
+
 nyc_precipitation <- read.table("data/nyc_precipitation.txt",
              header = TRUE, sep = "\t", stringsAsFactors = FALSE)
 head(nyc_precipitation)
